@@ -1,0 +1,31 @@
+{
+  "block.cutting_board.knife.hot": {
+    "sounds": [
+      "random/fizz"
+    ],
+    "subtitle": "confluence_delight.subtitles.cutting_board.knife_cut.hot"
+  },
+  "music.title": {
+    "sounds": [
+      {
+        "name": "confluence_delight:music/title",
+        "stream": true,
+        "volume": 0.5
+      }
+    ]
+  },
+  "music.title.intro": {
+    "sounds": [
+      {
+        "name": "confluence_delight:music/title_intro",
+        "stream": true,
+        "volume": 0.5
+      }
+    ]
+  },
+  "ui.advancement_toast.out": {
+    "sounds": [
+      "confluence_delight:sound/achievement_complete"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.confluence.delight.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "confluence_delight.refmap.json",
+  "mixins": [
+    "CuttingBoardBlockEntityMixin"
+  ],
+  "client": [
+    "client.ClientAdvancementsMixin",
+    "client.EntityRendererMixin",
+    "client.LevelRendererInvoker",
+    "client.LevelRendererMixin",
+    "client.LoadingOverlayMixin",
+    "client.MinecraftMixin",
+    "client.OptionsMixin",
+    "client.ToastComponentMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
