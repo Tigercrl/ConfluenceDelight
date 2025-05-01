@@ -41,7 +41,7 @@ public class DataGenerator {
         generator.addProvider(server, new ModItemTagsProvider(output, lookup, blockTagsProvider.contentsGetter(), helper));
         generator.addProvider(server, new ModRecipeProvider(output, lookup));
         generator.addProvider(server, new LootTableProvider(output, Set.of(), List.of(
-                new LootTableProvider.SubProviderEntry(ModBlockLootProvider::new, LootContextParamSets.EMPTY)
+                new LootTableProvider.SubProviderEntry(ModBlockLootProvider::new, LootContextParamSets.BLOCK)
         ), lookup));
     }
 }
