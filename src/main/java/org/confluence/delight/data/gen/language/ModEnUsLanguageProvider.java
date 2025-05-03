@@ -1,7 +1,9 @@
 package org.confluence.delight.data.gen.language;
 
 import net.minecraft.data.PackOutput;
+import org.confluence.delight.common.registry.ModBlocks;
 import org.confluence.delight.common.registry.ModCreativeTabs;
+import org.confluence.delight.common.registry.ModEffects;
 import org.confluence.delight.common.registry.ModItems;
 
 public class ModEnUsLanguageProvider extends AbstractModLanguageProvider {
@@ -22,6 +24,12 @@ public class ModEnUsLanguageProvider extends AbstractModLanguageProvider {
         addCreativeTab(ModCreativeTabs.FOOD, "Confluence Delight | Food");
         addCreativeTab(ModCreativeTabs.TOOL, "Confluence Delight | Tools");
         addCreativeTab(ModCreativeTabs.DEVELOPER, "Confluence Delight | Developer Items");
+
+        addItem(ModItems.GHARROT, "Gharrot", "''");
+        addItem(ModItems.WILD_GHARROTS, "Wild gharrots");
+        addItem(ModItems.GHAST_BLOSSOM, "Ghast blossom", "''");
+        addBlock(ModBlocks.GHARROTS, "Gharrots");
+        addBlock(ModBlocks.POTTED_GHAST_BLOSSOM, "Potted ghast blossom");
 
         addItem(ModItems.SLIME_PUDDING, "Slime pudding", "'Bouncy and tasty!'");
         addItem(ModItems.PINK_SLIME_PUDDING, "Pink slime pudding", "'Super bouncy!'");
@@ -48,7 +56,10 @@ public class ModEnUsLanguageProvider extends AbstractModLanguageProvider {
         addItem(ModItems.TIN_KNIFE, "Tin knife");
         addItem(ModItems.TITANIUM_KNIFE, "Titanium knife");
         addItem(ModItems.TUNGSTEN_KNIFE, "Tungsten knife");
+
         addItem(ModItems.ZENISH, "§l§6Z§ae§bn§ci§ds§eh", "'Just suppose it is a weapon'");
+
+        addEffect(ModEffects.BLOOD_CURSE, "Blood curse");
 
         add("confluence_delight.subtitles.cutting_board.knife_cut.hot", "Knife heats");
     }

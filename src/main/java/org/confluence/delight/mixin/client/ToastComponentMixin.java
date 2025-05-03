@@ -19,7 +19,7 @@ public class ToastComponentMixin {
     Minecraft minecraft;
 
     @Inject(method = "render", at = @At("TAIL"))
-    private void shineEffect(GuiGraphics guiGraphics, CallbackInfo ci) {
+    private void renderToast(GuiGraphics guiGraphics, CallbackInfo ci) {
         if (ClientConfigs.achievementToast) {
             TrToastManager.render(minecraft, guiGraphics);
         }

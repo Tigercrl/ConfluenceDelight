@@ -24,9 +24,9 @@ public class ConfluenceDelight {
         }
 
         // registry
-        ModEffects.EFFECTS.register(eventBus);
         ModBlocks.BLOCKS.register(eventBus);
         ModCreativeTabs.CREATIVE_TABS.register(eventBus);
+        ModEffects.EFFECTS.register(eventBus);
         ModItems.ITEMS.register(eventBus);
         ModPlacementModifiers.PLACEMENT_MODIFIERS.register(eventBus);
     }

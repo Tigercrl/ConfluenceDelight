@@ -1,5 +1,5 @@
 {
-  "feature": "confluence_delight:patch_wild_gharrots",
+  "feature": "farmersdelight:patch_wild_beetroots",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
@@ -17,7 +17,12 @@
     },
     {
       "type": "confluence_delight:biome",
-      "enabled": [
+      "enabledTags": [
+        "minecraft:is_overworld"
+      ],
+      "disabledTags": [
+        "confluence:the_corruption",
+        "confluence:the_hallow",
         "confluence:tr_crimson"
       ]
     }

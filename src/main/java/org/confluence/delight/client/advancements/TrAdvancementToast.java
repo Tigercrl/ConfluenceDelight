@@ -20,7 +20,6 @@ public class TrAdvancementToast {
     private final int FADE_IN_TIME = 500;
     private final int STAY_TIME = 3000;
     private final int FADE_OUT_TIME = 500;
-    private final int TEXT_FADE_TIME = 100;
     private final int WIDTH = 20;
     private final int HEIGHT = 20;
     private final ResourceLocation TEXTURE = resource("toast/advancement");

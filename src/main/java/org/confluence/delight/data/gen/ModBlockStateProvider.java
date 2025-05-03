@@ -5,10 +5,14 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.VariantBlockStateBuilder;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.confluence.delight.ConfluenceDelight;
+import org.confluence.delight.common.block.GharrotBlock;
 import org.confluence.delight.common.registry.ModBlocks;
 import vectorwing.farmersdelight.FarmersDelight;
+
+import static org.confluence.delight.ConfluenceDelight.resource;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -17,6 +21,24 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        VariantBlockStateBuilder gharrotBuilder = getVariantBuilder(ModBlocks.GHARROTS.get());
+        for (int i = 0; i <= GharrotBlock.FIRST_MAX_AGE; i++) {
+            String name = "gharrot_stage" + i / 2;
+            gharrotBuilder
+                    .partialState()
+                    .with(GharrotBlock.AGE, i)
+                    .modelForState()
+                    .modelFile(models().crop(name, resource("block/" + name)).renderType("cutout")).addModel();
+        }
+        for (int i = GharrotBlock.FIRST_MAX_AGE + 1; i <= GharrotBlock.SECOND_MAX_AGE; i++) {
+            String name = "gharrot_stage" + (i - GharrotBlock.FIRST_MAX_AGE / 2);
+            gharrotBuilder
+                    .partialState()
+                    .with(GharrotBlock.AGE, i)
+                    .modelForState()
+                    .modelFile(models().crop(name, resource("block/" + name)).renderType("cutout")).addModel();
+        }
+
         wildCropBlock(ModBlocks.WILD_GHARROTS.get());
         simpleCrossBlock(ModBlocks.GHAST_BLOSSOM.get());
         flowerPotBlock(ModBlocks.POTTED_GHAST_BLOSSOM.get(), ModBlocks.GHAST_BLOSSOM.get());

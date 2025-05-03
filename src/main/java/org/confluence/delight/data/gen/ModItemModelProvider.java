@@ -21,6 +21,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SLIME_PUDDING.get());
         basicItem(ModItems.PINK_SLIME_PUDDING.get());
 
+        basicItem(ModItems.GHARROT.get());
         blockItem(ModItems.WILD_GHARROTS.get());
         blockItem(ModItems.GHAST_BLOSSOM.get());
 

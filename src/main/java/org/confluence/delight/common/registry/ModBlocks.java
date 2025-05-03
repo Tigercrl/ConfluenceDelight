@@ -11,6 +11,7 @@ import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.confluence.delight.ConfluenceDelight;
 import org.confluence.delight.common.block.ConfluenceWildCropBlock;
+import org.confluence.delight.common.block.GharrotBlock;
 import org.confluence.mod.common.init.block.NatureBlocks;
 
 import java.util.function.Supplier;
@@ -19,7 +20,16 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registries.BLOCK, ConfluenceDelight.MODID);
 
     // Food - Gharrots
-//    public static final Supplier<Block> GHARROTS = B
+    public static final Supplier<Block> GHARROTS = BLOCKS.register("gharrots",
+            () -> new GharrotBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT)
+                            .noCollission()
+                            .randomTicks()
+                            .instabreak()
+                            .sound(SoundType.CROP)
+                            .pushReaction(PushReaction.DESTROY)
+            ));
     public static final Supplier<Block> WILD_GHARROTS = BLOCKS.register("wild_gharrots",
             () -> new ConfluenceWildCropBlock(
                     Holder.direct(ModEffects.BLOOD_CURSE.get()),

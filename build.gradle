@@ -10,9 +10,13 @@ group = mod_group_id
 
 repositories {
     mavenLocal()
-
     maven {
+        name = "Modrinth"
         url = "https://api.modrinth.com/maven"
+    }
+    maven {
+        name = "Curios"
+        url = uri("https://maven.theillusivec4.top/")
     }
 }
 
@@ -102,6 +106,9 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 dependencies {
     implementation "maven.modrinth:confluence:${rootProject.confluence_version}"
     implementation "maven.modrinth:farmers-delight:${rootProject.farmers_delight_version}"
+    implementation "top.theillusivec4.curios:curios-neoforge:${rootProject.curios_version}"
+
+    implementation fileTree(dir: 'libs', includes: ['*.jar'])
 
     // Example mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime

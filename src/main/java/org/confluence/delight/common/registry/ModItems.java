@@ -7,6 +7,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.component.ItemLore;
 import net.minecraft.world.item.component.Unbreakable;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -64,8 +65,8 @@ public class ModItems {
             () -> new ConsumableItem(withLore(bowlFoodItem(FoodValues.PINK_SLIME_PUDDING), "pink_slime_pudding")));
 
     // Food - Gharrots
-//    public static final Supplier<Item> GHARROT = registerFood("gharrot",
-//            () ->);
+    public static final Supplier<Item> GHARROT = registerFood("gharrot",
+            () -> new ItemNameBlockItem(ModBlocks.GHARROTS.get(), basicItem().food(ModFoods.GHARROT)));
     public static final Supplier<Item> WILD_GHARROTS = registerFood("wild_gharrots",
             () -> new BlockItem(ModBlocks.WILD_GHARROTS.get(), basicItem()));
     public static final Supplier<Item> GHAST_BLOSSOM = registerFood("ghast_blossom",

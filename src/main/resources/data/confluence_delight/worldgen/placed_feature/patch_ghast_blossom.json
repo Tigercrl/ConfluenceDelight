@@ -3,7 +3,7 @@
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 30
+      "chance": 50
     },
     {
       "type": "minecraft:in_square"
@@ -14,6 +14,12 @@
     },
     {
       "type": "minecraft:biome"
+    },
+    {
+      "type": "confluence_delight:biome",
+      "enabled": [
+        "confluence:tr_crimson"
+      ]
     }
   ]
 }

@@ -70,10 +70,14 @@
               }
             ]
           }
+        },
+        {
+          "type": "minecraft:rarity_filter",
+          "chance": 2
         }
       ]
     },
-    "tries": 32,
+    "tries": 16,
     "xz_spread": 6,
     "y_spread": 3
   }

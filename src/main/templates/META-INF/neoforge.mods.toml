@@ -24,17 +24,3 @@ type = "required"
 versionRange = "${minecraft_version_range}"
 ordering = "NONE"
 side = "BOTH"
-
-[[dependencies."${mod_id}"]]
-modId = "confluence"
-type = "required"
-versionRange = "[1.0.2-hotfix,)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies."${mod_id}"]]
-modId = "farmersdelight"
-type = "required"
-versionRange = "[1.2.7,)"
-ordering = "AFTER"
-side = "BOTH"

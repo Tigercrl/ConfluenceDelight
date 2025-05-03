@@ -1,7 +1,9 @@
 package org.confluence.delight.data.gen.language;
 
 import net.minecraft.data.PackOutput;
+import org.confluence.delight.common.registry.ModBlocks;
 import org.confluence.delight.common.registry.ModCreativeTabs;
+import org.confluence.delight.common.registry.ModEffects;
 import org.confluence.delight.common.registry.ModItems;
 
 public class ModZhCnLanguageProvider extends AbstractModLanguageProvider {
@@ -23,6 +25,11 @@ public class ModZhCnLanguageProvider extends AbstractModLanguageProvider {
         addCreativeTab(ModCreativeTabs.TOOL, "汇流乐事｜工具");
         addCreativeTab(ModCreativeTabs.DEVELOPER, "汇流乐事｜开发者物品");
 
+        addItem(ModItems.GHARROT, "鬼手萝卜", "“嘎嘣脆，血肉味”");
+        addItem(ModItems.WILD_GHARROTS, "野生鬼手萝卜");
+        addItem(ModItems.GHAST_BLOSSOM, "鬼眼花", "“虽然长的像，但不是眼眸花”");
+        addBlock(ModBlocks.GHARROTS, "鬼手萝卜");
+        addBlock(ModBlocks.POTTED_GHAST_BLOSSOM, "鬼眼花盆栽");
 
         addItem(ModItems.SLIME_PUDDING, "史莱姆布丁", "“滑溜又好吃！”");
         addItem(ModItems.PINK_SLIME_PUDDING, "粉史莱姆布丁", "“超级弹性！”");
@@ -50,7 +57,9 @@ public class ModZhCnLanguageProvider extends AbstractModLanguageProvider {
         addItem(ModItems.TITANIUM_KNIFE, "钛金刀");
         addItem(ModItems.TUNGSTEN_KNIFE, "钨刀");
 
-        addItem(ModItems.ZENISH, "§l§a天§b顶§e鱼", "“只要把它当武器就彳亍”");
+        addItem(ModItems.ZENISH, "§l§d天§c顶§6鱼", "“只要把它当武器就彳亍”");
+
+        addEffect(ModEffects.BLOOD_CURSE, "血脉诅咒");
 
         add("confluence_delight.subtitles.cutting_board.knife_cut.hot", "刀：加热");
     }

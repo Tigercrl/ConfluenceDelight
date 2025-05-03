@@ -10,6 +10,7 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import vectorwing.farmersdelight.common.block.WildCropBlock;
 
@@ -26,7 +27,7 @@ public class ConfluenceWildCropBlock extends WildCropBlock {
     }
 
     @Override
-    protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
+    protected boolean mayPlaceOn(@NotNull BlockState state, @NotNull BlockGetter level, @NotNull BlockPos pos) {
         return Arrays.stream(mayPlaceOn).anyMatch(obj -> matches(state, obj));
     }
 
